@@ -2,7 +2,7 @@ class CreateSurveys < ActiveRecord::Migration
   def change
     create_table :surveys do |t|
       t.string :title
-      t.refernces :user
+      t.references :user, index: true
 
       t.timestamps null: false
     end

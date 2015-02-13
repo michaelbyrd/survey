@@ -1,9 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  text: MyString
-  question_id: 
+  text: 'yes'
+  question: one
 
 two:
-  text: MyString
-  question_id: 
+  text: 'no'
+  question: one
+
+three:
+  text: 'red'
+  question: two
+
+four:
+  text: 'blue'
+  question: two
+
+five:
+  text: 'green'
+  question: two

@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  text: MyString
+  text: 'Are you indecisive?'
   position: 1
-  survey_id: 
+  survey: one
 
 two:
-  text: MyString
-  position: 1
-  survey_id: 
+  text: 'What is your favorite color?'
+  position: 2
+  survey: one
