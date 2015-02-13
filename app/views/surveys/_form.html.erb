@@ -6,5 +6,8 @@
     <%= ff.label :text %>
     <%= ff.text_field :text %>
   <% end %>
+
+  <%= link_to_add_fields 'Add a question', f, :questions %>
+
   <%= f.submit %>
 <% end %>

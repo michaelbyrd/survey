@@ -6,7 +6,6 @@ class SurveysController < ApplicationController
   end
 
   def submit_answers
-    puts params[:answers]
     answers = params[:answers]
     @survey.questions.each do |q|
       Answer.create!(question_id: q.id , text: answers[q.id])
