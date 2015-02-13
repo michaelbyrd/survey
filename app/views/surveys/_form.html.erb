@@ -1,4 +1,10 @@
 <%= form_for @survey do |f| %>
+  <%= f.label :title %>
   <%= f.text_field :title %>
+
+  <%= f.fields_for :questions do |ff| %>
+    <%= ff.label :text %>
+    <%= ff.text_field :text %>
+  <% end %>
   <%= f.submit %>
 <% end %>

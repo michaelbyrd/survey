@@ -1,0 +1,12 @@
+<h1>surveys/:id/show<h1>
+
+<div class='title'>
+  <p><%= @survey.title %></p>
+</div>
+
+<% @survey.questions.each do |q| %>
+  <p>Question: <%= q.text %></p>
+<% end %>
+
+
+<%= link_to "Edit", edit_survey_path %>

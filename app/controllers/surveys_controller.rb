@@ -6,28 +6,35 @@ class SurveysController < ApplicationController
   end
 
   def show
-
   end
 
   def new
     @survey = Survey.new
-
+    @survey.questions.build
   end
 
   def create
-
+    survey = Survey.new(survey_params)
+    if survey.save
+      redirect_to survey
+    else
+      render 'new'
+    end
   end
 
   def edit
-
+    @survey.questions.build
   end
 
   def update
-
+    if @survey.update(survey_params)
+      redirect_to @survey
+    else
+      render 'edit'
+    end
   end
 
   def destroy
-
   end
 
   private def survey_params
