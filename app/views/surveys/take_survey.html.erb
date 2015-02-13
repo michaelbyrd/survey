@@ -1,0 +1,9 @@
+<h1>Enter your answers below</h1>
+
+<%= form_tag submit_answers_survey_path(@survey) do %>
+  <% @survey.questions.each do |q| %>
+    <p><%= q.text %></p>
+    <%= text_field_tag "answers[#{q.id}]" %>
+  <% end %>
+  <%= submit_tag %>
+<% end %>

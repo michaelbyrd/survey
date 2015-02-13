@@ -1,5 +1,18 @@
 class SurveysController < ApplicationController
-  before_action :set_survey, only: [:show, :edit, :update, :destroy]
+  before_action :set_survey, only: [:show, :edit, :update, :destroy, :take_survey, :submit_answers]
+
+  def take_survey
+
+  end
+
+  def submit_answers
+    puts params[:answers]
+    answers = params[:answers]
+    @survey.questions.each do |q|
+      Answer.create!(question_id: q.id , text: answers[q.id])
+    end
+    redirect_to @survey
+  end
 
   def index
     @surveys = Survey.all

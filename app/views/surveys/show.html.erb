@@ -6,7 +6,7 @@
 
 <% @survey.questions.each do |q| %>
   <p>Question: <%= q.text %></p>
+  <p>Answer Count: <%= q.answers.count %></p>
 <% end %>
-
 
 <%= link_to "Edit", edit_survey_path %>
