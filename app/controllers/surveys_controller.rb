@@ -6,9 +6,8 @@ class SurveysController < ApplicationController
   end
 
   def submit_answers
-    answers = params[:answers]
     @survey.questions.each do |q|
-      Answer.create!(question_id: q.id , text: answers[q.id])
+      Answer.create!(question_id: q.id , text: params[:answers][q.id])
     end
     redirect_to @survey
   end
